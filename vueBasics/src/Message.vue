@@ -1,17 +1,23 @@
 <template>
   <div>
-    <h1>Learning All About Vue</h1>
-    <app-input></app-input>
+    <h1>{{ message }}</h1>
+    <app-input :msg="message" @messageChanged="message = $event"></app-input>
   </div>
 </template>
 
 <script>
-import Input from "./Input"; // Need to import file to use their components
+// cause you're only using the input component inside this component, do not import/export it in the main.js file, rather import/export it directly in this component file
+import Input from "./Input"; // importing ObjectName from ComponentFile
 
 export default {
-  //Use components here when only using it in 1 file (else import/export into Main file)
+  data() {
+    return {
+      message: "Learning All About Vue"
+    };
+  },
+  //exporting selectorName: ObjectName
   components: {
-    "app-input": Input // selector: object imported (then add selector to template above)
+    "app-input": Input // now add selector to html template above where you want it to be displayed
   }
 };
 </script>

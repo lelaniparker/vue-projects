@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// need script as using directive inside html template (therefore need to export it)
 export default {
   data() {
     return {

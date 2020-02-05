@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Message from './Message.vue'     // import object from component file
+import Message from './Message.vue'     // import ObjectName from ComponentFile
 import Button from './Button.vue'
 
-Vue.component('app-message', Message) // set-up selector (used in App.vue file) & object (imported)
+Vue.component('app-message', Message)   // selectorName, ObjectName
 Vue.component('on-off-button', Button)
 
 
